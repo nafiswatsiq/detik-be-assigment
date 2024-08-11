@@ -16,15 +16,20 @@
         <!-- Fonts -->
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
+        @wireUiScripts
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])
         @livewireStyles
         @livewireScripts
 
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
+        @stack('styles')
     </head>
 
     <body>
         @yield('body')
+
     </body>
+
+    @stack('scripts')
 </html>

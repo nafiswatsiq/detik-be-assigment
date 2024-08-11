@@ -1,19 +1,17 @@
 @extends('layouts.base')
 
 @section('body')
-    <div class="m-0 font-sans antialiased font-normal text-base leading-default bg-gray-50 text-slate-500">
-        <x-sidebar />
+  <div class="m-0 font-sans antialiased font-normal bg-white text-start text-base leading-default text-slate-500">
+    <x-guest-navbar />
 
-        <main class="ease-soft-in-out xl:ml-68.5 relative h-full max-h-screen rounded-xl transition-all duration-200">
-            <x-navbar />
-            
-            @yield('content')
-            
-            @isset($slot)
-                {{ $slot }}
-            @endisset
-        </main>
-    </div>
+    @yield('content')
+    
+    @isset($slot)
+        {{ $slot }}
+    @endisset
+
+    <x-guest-footer />
+  </div>
 @endsection
 
 @push('styles')

@@ -1,6 +1,10 @@
 <?php
 
+use App\Livewire\Auth\Login;
+use App\Livewire\Auth\Register;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\LogoutController;
+use App\Livewire\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,4 +17,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'welcome')->name('home');
+Route::get('/login', Login::class)->name('login')->middleware('guest');
+Route::get('/register', Register::class)->name('register')->middleware('guest');
+
+Route::middleware('auth')->group(function () {
+  Route::get('/', Dashboard::class)->name('home');
+
+  Route::post('logout', LogoutController::class)->name('logout');
+});
