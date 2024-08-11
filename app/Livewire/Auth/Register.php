@@ -31,6 +31,8 @@ class Register extends Component
             'password' => Hash::make($this->password),
         ]);
 
+        $user->assignRole('user');
+        
         Auth::login($user);
 
         return redirect()->intended('/');
