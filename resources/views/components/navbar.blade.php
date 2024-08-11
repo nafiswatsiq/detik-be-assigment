@@ -13,7 +13,7 @@
 
     <div class="flex items-center mt-2 grow sm:mt-0 sm:mr-6 md:mr-0 lg:flex lg:basis-auto">
       <div class="flex items-center md:ml-auto md:pr-4">
-        <div class="relative items-center flex flex-wrap w-full transition-all rounded-lg ease-soft z-50">
+        <div class="relative items-center flex flex-wrap w-full transition-all rounded-lg ease-soft z-0">
           <div class="mr-6 text-sm">Hi, <span class="text-blue-500">{{ auth()->user()->name }}!</span></div>
         </div>
       </div>
@@ -22,7 +22,7 @@
         <li class="flex items-center">
           <form action="{{ route('logout') }}" method="post">
             @csrf
-            <button type="submit" class="text-sm">
+            <button type="submit" class="text-sm flex">
               Logout
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />

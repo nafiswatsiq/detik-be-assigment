@@ -6,12 +6,14 @@
 
         <main class="ease-soft-in-out xl:ml-68.5 relative h-full max-h-screen rounded-xl transition-all duration-200">
             <x-navbar />
-            
-            @yield('content')
-            
-            @isset($slot)
-                {{ $slot }}
-            @endisset
+
+            <div class="w-full px-6 py-6 mx-auto min-h-[90vh]">
+                @yield('content')
+                
+                @isset($slot)
+                    {{ $slot }}
+                @endisset
+            </div>
         </main>
     </div>
 @endsection

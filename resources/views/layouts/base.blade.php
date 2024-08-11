@@ -16,6 +16,7 @@
         <!-- Fonts -->
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
+        @stack('styles')
         @wireUiScripts
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])
         @livewireStyles
@@ -23,7 +24,6 @@
 
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        @stack('styles')
     </head>
 
     <body>
