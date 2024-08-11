@@ -4,6 +4,8 @@ use App\Livewire\Auth\Login;
 use App\Livewire\Auth\Register;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LogoutController;
+use App\Livewire\BookList;
+use App\Livewire\Category;
 use App\Livewire\Dashboard;
 
 /*
@@ -22,6 +24,8 @@ Route::get('/register', Register::class)->name('register')->middleware('guest');
 
 Route::middleware('auth')->group(function () {
   Route::get('/', Dashboard::class)->name('home');
+  Route::get('/category', Category::class)->name('category');
+  Route::get('/book-list', BookList::class)->name('book.list');
 
   Route::post('logout', LogoutController::class)->name('logout');
 });
