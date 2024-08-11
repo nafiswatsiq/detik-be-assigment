@@ -1,0 +1,10 @@
+Admin
+user: admin@gmail.com
+pass :12345678
+
+User
+user: user@gmail.com
+pass :12345678
+
+Repository
+https://github.com/nafiswatsiq/detik-be-assigment

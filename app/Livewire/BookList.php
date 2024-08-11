@@ -54,12 +54,7 @@ class BookList extends Component
             'cover' => $cover
         ]);
 
-        $this->title = '';
-        $this->description = '';
-        $this->quantity = '';
-        $this->file = '';
-        $this->cover = '';
-        $this->category = '';
+        $this->reset();
         $this->openModal = false;
     }
 
@@ -108,12 +103,7 @@ class BookList extends Component
             'cover' => $this->cover ? $this->cover->store('covers') : $book->cover
         ]);
 
-        $this->title = '';
-        $this->description = '';
-        $this->quantity = '';
-        $this->category = '';
-        $this->file = '';
-        $this->cover = '';
+        $this->reset();
         $this->openModal = false;
         $this->method = 'save';
     }

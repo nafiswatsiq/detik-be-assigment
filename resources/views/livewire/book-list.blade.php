@@ -43,7 +43,7 @@
         </div>
     </div>
 
-    <x-modal-card title="Tambah Kategori" wire:model="openModal">
+    <x-modal-card title="Tambah Buku" wire:model="openModal">
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <x-input wire:model.live="title" label="Judul" placeholder="" />
 
