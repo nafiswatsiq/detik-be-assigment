@@ -2,12 +2,14 @@
 
 namespace App\Livewire;
 
+use App\Exports\BookExport;
 use App\Models\Book;
 use Livewire\Component;
 use App\Models\Category;
 use Illuminate\Support\Str;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
+use Maatwebsite\Excel\Facades\Excel;
 
 class BookList extends Component
 {
@@ -114,6 +116,11 @@ class BookList extends Component
         $this->cover = '';
         $this->openModal = false;
         $this->method = 'save';
+    }
+
+    public function export() 
+    {
+        return Excel::download(new BookExport, 'data-buku.xlsx');
     }
 
     public function render()

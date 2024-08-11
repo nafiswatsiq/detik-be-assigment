@@ -3,6 +3,7 @@
         <div class="pb-3 flex justify-between">
             <div>
                 <x-button x-on:click="$openModal('openModal')" primary label="Tambah" icon="plus" class="!bg-primary-500"/>
+                <x-button wire:click="export" positive label="Export" icon="arrow-up-tray" class="!bg-green-500"/>
             </div>
             
             <div class="w-60">
